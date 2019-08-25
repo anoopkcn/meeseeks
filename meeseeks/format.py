@@ -1,4 +1,4 @@
-def strip(list, sep=" "):
+def to_string(list, sep=" "):
     """returns a list without brakets[]
 
     For using python list's in other programs
@@ -14,7 +14,7 @@ def strip(list, sep=" "):
     return f"{sep}".join(map(str, list))
 
 
-def commas(N):
+def with_commas(N):
     """returns a number separated with commas
 
     Number is returend in a readable format...
