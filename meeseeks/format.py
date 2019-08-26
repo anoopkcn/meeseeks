@@ -1,5 +1,5 @@
-def to_string(list, sep=" "):
-    """returns a list without brakets[]
+def to_string(list, sep=' '):
+    '''returns a list without brakets[]
 
     For using python list's in other programs
 
@@ -10,12 +10,12 @@ def to_string(list, sep=" "):
     >>> a = [1,2,3,4,5]
     >>> print(strip(a))
     >>> 1 2 4 5
-    """
-    return f"{sep}".join(map(str, list))
+    '''
+    return f'{sep}'.join(map(str, list))
 
 
 def with_commas(N):
-    """returns a number separated with commas
+    '''returns a number separated with commas
 
     Number is returend in a readable format...
     ... with commas separating the digits 
@@ -27,16 +27,16 @@ def with_commas(N):
     >>> a = 12345
     >>> print(commas(a))
     >>> 12,345
-    """
-    return "{:,}".format(N)
+    '''
+    return '{:,}'.format(N)
 
 
 def is_number(s):
-    """
+    '''
     Check if a string can be cast to a float or numeric (integer).
     Takes a string.
     Returns True or False
-    """
+    '''
     try:
         float(s)
         return True
@@ -53,13 +53,13 @@ def is_number(s):
 
 
 def to_number(s):
-    """
+    '''
     Cast a string to a float or integer. 
     Tries casting to float first and if that works then it tries casting the 
     string to an integer.
     Returns a float, int, or if fails, False. (Where using, it shouldn't ever
     trigger returning `False` because checked all could be converted first.)
-    """
+    '''
     try:
         number = float(s)
         try:
@@ -80,9 +80,10 @@ def to_number(s):
     return False
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # tests
     print(to_string([1, 2, 3, 4, 5]))
     print(with_commas(20000))
-    print(is_number("3e-4"))
-    print(to_number("3.12e2"))
+    print(is_number('3e-4'))
+    print(is_number('30,000'))
+    print(to_number('3.12e2'))
